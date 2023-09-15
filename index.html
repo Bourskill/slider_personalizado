@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mrtoston</title>
+
+    <!-- Flickity CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css"
+        integrity="sha512-fJcFDOQo2+/Ke365m0NMCZt5uGYEWSxth3wg2i0dXu7A1jQfz9T4hdzz6nkzwmJdOdkcS8jmy2lWGaRXl+nFMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    <!-- Flickity JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js"
+        integrity="sha512-achKCfKcYJg0u0J7UDJZbtrffUwtTLQMFSn28bDJ1Xl9DWkl/6VDT3LMfVTo09V51hmnjrrOTbtg4rEgg0QArA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- normalize JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        #preloader-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #000;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: fixed;
+            z-index: 99999;
+        }
+
+        .lds-dual-ring {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
+
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            border-color: #ffbc00 transparent #ffbc00 transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+
+        @keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes opacitys {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div id="preloader-container">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <div class="page-content">
+        <div class="carousel" data-flickity>
+            <div class="carousel-cell">
+                <img src="img/pexels-ezra-comeau-2387418.webp" loading="lazy" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/pexels-francesco-ungaro-2325446.webp" loading="lazy" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/pexels-jaime-reimer-2662116.webp" loading="lazy" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/pexels-pixabay-147411.webp" loading="lazy" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
